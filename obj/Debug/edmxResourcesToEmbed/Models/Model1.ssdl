@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tvtK22CNTT3Lession09Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tvtKhoa">
+    <Key>
+      <PropertyRef Name="tvtMaKH" />
+    </Key>
+    <Property Name="tvtMaKH" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="tvtTenKH" Type="nvarchar" MaxLength="50" />
+    <Property Name="tvtTrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="tvtSinhVien">
+    <Key>
+      <PropertyRef Name="tvtMaSV" />
+    </Key>
+    <Property Name="tvtMaSV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tvtHoSV" Type="nvarchar" MaxLength="50" />
+    <Property Name="tvtTenSV" Type="nvarchar" MaxLength="50" />
+    <Property Name="tvtNgaySinh" Type="date" />
+    <Property Name="tvtPhai" Type="nchar" MaxLength="10" />
+    <Property Name="tvtPhone" Type="nchar" MaxLength="10" />
+    <Property Name="tvtEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="tvtMaKH" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="tvtK22CNTT3Lession09ModelStoreContainer">
+    <EntitySet Name="tvtKhoa" EntityType="Self.tvtKhoa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tvtSinhVien" EntityType="Self.tvtSinhVien" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

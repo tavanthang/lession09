@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="tvtK22CNTT3Lession09Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tvtKhoa">
+          <Key>
+            <PropertyRef Name="tvtMaKH" />
+          </Key>
+          <Property Name="tvtMaKH" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="tvtTenKH" Type="nvarchar" MaxLength="50" />
+          <Property Name="tvtTrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="tvtSinhVien">
+          <Key>
+            <PropertyRef Name="tvtMaSV" />
+          </Key>
+          <Property Name="tvtMaSV" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="tvtHoSV" Type="nvarchar" MaxLength="50" />
+          <Property Name="tvtTenSV" Type="nvarchar" MaxLength="50" />
+          <Property Name="tvtNgaySinh" Type="date" />
+          <Property Name="tvtPhai" Type="nchar" MaxLength="10" />
+          <Property Name="tvtPhone" Type="nchar" MaxLength="10" />
+          <Property Name="tvtEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="tvtMaKH" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="tvtK22CNTT3Lession09ModelStoreContainer">
+          <EntitySet Name="tvtKhoa" EntityType="Self.tvtKhoa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tvtSinhVien" EntityType="Self.tvtSinhVien" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="tvtK22CNTT3Lession09Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tvtKhoa">
+          <Key>
+            <PropertyRef Name="tvtMaKH" />
+          </Key>
+          <Property Name="tvtMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="tvtTenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tvtTrangThai" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tvtSinhVien">
+          <Key>
+            <PropertyRef Name="tvtMaSV" />
+          </Key>
+          <Property Name="tvtMaSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tvtHoSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tvtTenSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tvtNgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="tvtPhai" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="tvtPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="tvtEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tvtMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="tvtK22CNTT3Lession09Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tvtKhoa" EntityType="Self.tvtKhoa" />
+          <EntitySet Name="tvtSinhVien" EntityType="Self.tvtSinhVien" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="tvtK22CNTT3Lession09ModelStoreContainer" CdmEntityContainer="tvtK22CNTT3Lession09Entities">
+          <EntitySetMapping Name="tvtKhoa">
+            <EntityTypeMapping TypeName="tvtK22CNTT3Lession09Model.tvtKhoa">
+              <MappingFragment StoreEntitySet="tvtKhoa">
+                <ScalarProperty Name="tvtMaKH" ColumnName="tvtMaKH" />
+                <ScalarProperty Name="tvtTenKH" ColumnName="tvtTenKH" />
+                <ScalarProperty Name="tvtTrangThai" ColumnName="tvtTrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tvtSinhVien">
+            <EntityTypeMapping TypeName="tvtK22CNTT3Lession09Model.tvtSinhVien">
+              <MappingFragment StoreEntitySet="tvtSinhVien">
+                <ScalarProperty Name="tvtMaSV" ColumnName="tvtMaSV" />
+                <ScalarProperty Name="tvtHoSV" ColumnName="tvtHoSV" />
+                <ScalarProperty Name="tvtTenSV" ColumnName="tvtTenSV" />
+                <ScalarProperty Name="tvtNgaySinh" ColumnName="tvtNgaySinh" />
+                <ScalarProperty Name="tvtPhai" ColumnName="tvtPhai" />
+                <ScalarProperty Name="tvtPhone" ColumnName="tvtPhone" />
+                <ScalarProperty Name="tvtEmail" ColumnName="tvtEmail" />
+                <ScalarProperty Name="tvtMaKH" ColumnName="tvtMaKH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

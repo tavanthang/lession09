@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tvtK22CNTT3Lession09Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tvtKhoa">
+    <Key>
+      <PropertyRef Name="tvtMaKH" />
+    </Key>
+    <Property Name="tvtMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="tvtTenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tvtTrangThai" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tvtSinhVien">
+    <Key>
+      <PropertyRef Name="tvtMaSV" />
+    </Key>
+    <Property Name="tvtMaSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tvtHoSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tvtTenSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tvtNgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="tvtPhai" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="tvtPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="tvtEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tvtMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="tvtK22CNTT3Lession09Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tvtKhoa" EntityType="Self.tvtKhoa" />
+    <EntitySet Name="tvtSinhVien" EntityType="Self.tvtSinhVien" />
+  </EntityContainer>
+</Schema>
